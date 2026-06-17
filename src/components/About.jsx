@@ -89,11 +89,11 @@ export default memo(function About() {
           transition={{ duration: 0.6 }}
           className="flex-shrink-0 w-40 h-40 sm:w-56 sm:h-56 rounded-full overflow-hidden border-4 border-white dark:border-neutral-900 shadow-md bg-neutral-200 dark:bg-neutral-800"
           tabIndex={0}
-          aria-label="Profile photo of Shashank Raj"
+          aria-label="Profile photo of Mark Dixon"
         >
           <img
             src="/assets/MyPhotograph.png"
-            alt="Shashank Raj"
+            alt="Mark Dixon"
             loading="lazy"
             decoding="async"
             className="object-cover w-full h-full"
@@ -118,7 +118,7 @@ export default memo(function About() {
           <h1 className="text-4xl sm:text-5xl font-bold leading-tight mb-3 text-foreground text-center md:text-left">
             Hi, I'm{" "}
             <span className="bg-gradient-to-r from-neutral-800 via-neutral-700 to-neutral-600 dark:from-white dark:via-neutral-300 dark:to-neutral-400 bg-clip-text text-transparent">
-              Shashank Raj
+              Mark Dixon
             </span>
           </h1>
 

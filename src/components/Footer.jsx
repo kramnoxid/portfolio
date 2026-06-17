@@ -25,7 +25,7 @@ const Footer = memo(() => {
     <footer className="w-full bg-muted/30 border-t border-border pt-8 pb-10 mt-32">
       <div className="max-w-5xl mx-auto px-4 sm:px-8 flex flex-col items-center text-center gap-5">
         <div className="text-sm text-muted-foreground">
-          © 2025 Shashank Raj. All rights reserved.
+          © 2025 Mark Dixon. All rights reserved.
         </div>
         <div className="flex justify-center gap-6">
           {socialLinks.map(({ href, title, icon: Icon }) => (

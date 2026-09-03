@@ -1,79 +1,8 @@
-import { Github, Linkedin, Mail, FileText, GraduationCap } from "lucide-react";
+import { Mail, GraduationCap } from "lucide-react";
 import { motion } from "framer-motion";
-import { useMemo, memo } from "react";
-
-// Memoized social link component
-const SocialLink = memo(({ href, icon, title, className }) => (
-  <a
-    href={href}
-    target="_blank"
-    rel="noopener noreferrer"
-    className={className}
-    title={title}
-  >
-    {icon}
-  </a>
-));
-SocialLink.displayName = "SocialLink";
-
-// Memoized tag component
-const Tag = memo(({ tag }) => (
-  <span className="px-4 py-1.5 rounded-full text-xs font-medium bg-neutral-100 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-200 border border-neutral-300 dark:border-neutral-700 hover:bg-neutral-200 dark:hover:bg-neutral-700 transition-all">
-    {tag}
-  </span>
-));
-Tag.displayName = "Tag";
-
-const SOCIAL_LINKS = [
-  {
-    href: "https://github.com/shashank2401",
-    icon: <Github className="w-5 h-5" />,
-    title: "GitHub",
-  },
-  {
-    href: "https://www.linkedin.com/in/shashankraj2401/",
-    icon: <Linkedin className="w-5 h-5" />,
-    title: "LinkedIn",
-  },
-  {
-    href: "mailto:shashankraj0124@gmail.com",
-    icon: <Mail className="w-5 h-5" />,
-    title: "Email",
-  },
-];
-
-const TAGS = [
-  "Competitive Programming",
-  "Data Structures",
-  "Algorithms",
-  "C++",
-  "Problem Solving",
-  "Web Development",
-];
-
-const RESUME_URL =
-  "https://drive.google.com/file/d/1FIq3CNO73-M9GXjIhZAYo49gQGxgmudO/view?usp=sharing";
+import { memo } from "react";
 
 export default memo(function About() {
-  const socialLinksElements = useMemo(
-    () =>
-      SOCIAL_LINKS.map(({ href, icon, title }) => (
-        <SocialLink
-          key={title}
-          href={href}
-          icon={icon}
-          title={title}
-          className="w-11 h-11 flex items-center justify-center rounded-xl border border-neutral-300 dark:border-neutral-700 bg-white dark:bg-neutral-900 text-neutral-700 dark:text-neutral-200 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:scale-105 transition-all"
-        />
-      )),
-    []
-  );
-
-  const tagElements = useMemo(
-    () => TAGS.map((tag) => <Tag key={tag} tag={tag} />),
-    []
-  );
-
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -122,36 +51,42 @@ export default memo(function About() {
             </span>
           </h1>
 
-          <div className="flex items-center justify-center md:justify-start gap-2 text-muted-foreground text-sm mb-2">
+          <div className="flex items-center justify-center md:justify-start gap-2 text-muted-foreground text-sm mb-4">
             <GraduationCap className="w-4 h-4" />
-            <span>IIT (BHU) Varanasi</span>
+            <span>B.App Sci (Hons Geology), Grad Cert Geospatial Science</span>
           </div>
 
           <p className="text-base sm:text-lg text-muted-foreground leading-relaxed max-w-xl mb-4 text-center md:text-left">
-            I'm a passionate student with a strong interest in{" "}
+            Mark is an agricultural and environmental consultant with high-level
+            expertise in{" "}
             <span className="text-foreground font-medium">
-              competitive programming
-            </span>{" "}
-            and tackling challenging problems. I love crafting efficient
-            solutions and exploring new technologies. My journey in tech
-            combines rigorous academic training with hands-on project
-            experience.
+              soil, hydrology, hydrogeology, and spatial analysis
+            </span>
+            , developed across regional salinity monitoring, nutrient management,
+            reclaimed-water irrigation, contaminated land, and water resource
+            projects. He also farms — as managing director of a successful
+            regenerative grazing enterprise in western Victoria built on
+            innovative grazing and soil-biology practices.
           </p>
 
-          <div className="flex flex-wrap gap-2 mb-4 justify-center md:justify-start">
-            {tagElements}
-          </div>
+          <p className="text-base sm:text-lg text-muted-foreground leading-relaxed max-w-xl mb-4 text-center md:text-left">
+            He holds a Grad Cert in Geospatial Science and has decades of GIS and
+            mapping experience across agriculture, environment, mining, and
+            transport. Most recently, as a{" "}
+            <span className="text-foreground font-medium">Geospatial Specialist</span>{" "}
+            on agricultural soil carbon projects, he led multi-attribute spatial
+            analysis for site selection, developed mobile apps for baseline data
+            capture, and co-designed project maps with farmers using bespoke
+            web-based tools.
+          </p>
 
           <div className="flex flex-wrap gap-4 justify-center md:justify-start">
-            {socialLinksElements}
             <a
-              href={RESUME_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 h-11 rounded-xl border border-neutral-300 dark:border-neutral-700 bg-white dark:bg-neutral-900 text-neutral-800 dark:text-neutral-200 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:scale-105 transition-all"
+              href="mailto:mark@markingmaps.com"
+              className="w-11 h-11 flex items-center justify-center rounded-xl border border-neutral-300 dark:border-neutral-700 bg-white dark:bg-neutral-900 text-neutral-700 dark:text-neutral-200 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:scale-105 transition-all"
+              title="Email"
             >
-              <FileText className="w-4 h-4" />
-              Resume
+              <Mail className="w-5 h-5" />
             </a>
           </div>
         </motion.div>

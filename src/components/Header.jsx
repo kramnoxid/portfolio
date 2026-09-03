@@ -18,7 +18,6 @@ const headerVariants = {
 
 const navLinks = [
   { to: "/about", label: "About" },
-  { to: "/skills", label: "Skills" },
   { to: "/academics", label: "Education" },
   { to: "/projects", label: "Projects" },
   { to: "/cp", label: "CP" },

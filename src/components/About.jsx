@@ -82,7 +82,7 @@ export default memo(function About() {
 
           <div className="flex flex-wrap gap-4 justify-center md:justify-start">
             <a
-              href="mailto:mark@markingmaps.com"
+              href="mailto:mark@markingmaps.au"
               className="w-11 h-11 flex items-center justify-center rounded-xl border border-neutral-300 dark:border-neutral-700 bg-white dark:bg-neutral-900 text-neutral-700 dark:text-neutral-200 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:scale-105 transition-all"
               title="Email"
             >

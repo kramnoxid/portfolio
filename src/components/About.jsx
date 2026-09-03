@@ -1,6 +1,7 @@
 import { Mail, GraduationCap } from "lucide-react";
 import { motion } from "framer-motion";
 import { memo } from "react";
+import profilePhoto from "@/assets/MyPhotograph.png";
 
 export default memo(function About() {
   return (
@@ -21,7 +22,7 @@ export default memo(function About() {
           aria-label="Profile photo of Mark Dixon"
         >
           <img
-            src="/assets/MyPhotograph.png"
+            src={profilePhoto}
             alt="Pencil-sketch portrait of Mark Dixon with his goat herd"
             loading="lazy"
             decoding="async"

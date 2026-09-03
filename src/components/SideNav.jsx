@@ -2,10 +2,6 @@ import { useEffect, useCallback, memo, useMemo } from "react";
 import { motion } from "framer-motion";
 import {
   User,
-  GraduationCap,
-  FolderKanban,
-  Swords,
-  Mail,
   X,
 } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
@@ -13,10 +9,6 @@ import { Link, useLocation } from "react-router-dom";
 // Move static data outside component
 const navLinks = [
   { to: "/about", icon: User, text: "About" },
-  { to: "/academics", icon: GraduationCap, text: "Education" },
-  { to: "/projects", icon: FolderKanban, text: "Projects" },
-  { to: "/cp", icon: Swords, text: "CP" },
-  { to: "/contact", icon: Mail, text: "Contact" },
 ];
 
 // Animation variants

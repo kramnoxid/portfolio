@@ -22,11 +22,11 @@ export default memo(function About() {
         >
           <img
             src="/assets/MyPhotograph.png"
-            alt="Mark Dixon"
+            alt="Pencil-sketch portrait of Mark Dixon with his goat herd"
             loading="lazy"
             decoding="async"
             className="object-cover w-full h-full"
-            style={{ aspectRatio: "1/1" }}
+            style={{ aspectRatio: "1/1", objectPosition: "center 32%" }}
           />
         </motion.div>
 

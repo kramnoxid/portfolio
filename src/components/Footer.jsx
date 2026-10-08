@@ -1,20 +1,10 @@
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Mail } from "lucide-react";
 import { memo } from "react";
 
 // Social links data outside the component for efficiency
 const socialLinks = [
   {
-    href: "https://github.com/shashank2401",
-    title: "GitHub",
-    icon: Github,
-  },
-  {
-    href: "https://www.linkedin.com/in/shashankraj2401/",
-    title: "LinkedIn",
-    icon: Linkedin,
-  },
-  {
-    href: "mailto:shashankraj0124@gmail.com",
+    href: "mailto:mark@markingmaps.au",
     title: "Email",
     icon: Mail,
   },

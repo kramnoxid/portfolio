@@ -1,8 +1,17 @@
-# SPA routing for React Router — serve index.html for any path that
-# isn't a real file or directory, so deep links and refreshes work.
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
+
+  # Force HTTPS — redirect any plain-HTTP request to the secure URL.
+  # Skip /.well-known/ so certificate issuance/renewal (ACME) is never affected.
+  # Check X-Forwarded-Proto too, in case TLS is terminated upstream.
+  RewriteCond %{REQUEST_URI} !^/\.well-known/
+  RewriteCond %{HTTPS} !=on
+  RewriteCond %{HTTP:X-Forwarded-Proto} !=https
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+  # SPA routing for React Router — serve index.html for any path that
+  # isn't a real file or directory, so deep links and refreshes work.
   RewriteRule ^index\.html$ - [L]
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
